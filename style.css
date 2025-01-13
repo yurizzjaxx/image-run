@@ -1,0 +1,63 @@
+* {
+  
+}
+
+._tabTop {
+  display: grid;
+  background-color: #000000;
+  position: fixed;
+  min-width: 50vh;
+  height: auto;
+  border-radius: 0px 0px 35px 35px;
+  padding: 0vh 1vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+}
+
+body {
+  background-image: url("image/ddd123.jpg");
+  display: grid;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  place-items: center;
+  min-height: 100vh;
+  justify-self: center;
+  align-content: center;
+}
+
+
+.custom {
+  background-color: #000000;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.textEdit input[type="text"] {
+  width: 20vh;
+  height: 10vh;
+}
+
+
+.textEdit {
+  border: 3px solid #FFFFFF;
+  background-color: #000000;
+  border-radius: 6px;
+  min-height: 1vh;
+  color: white;
+}
+
+.tab {
+  padding: 0vh 6vh;
+}
+
+p, h1, h2, h3, h4, h5 {
+  color: #FFFFFF;
+}
+
+._sp {
+  border: 0.5px solid;
+}
+
