@@ -70,5 +70,7 @@ function dis(token) {
 
 
 function successUser() {
-  window.location.href = "index.html"
+  window.location.originf
 }
+
+
