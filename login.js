@@ -70,7 +70,7 @@ function dis(token) {
 
 
 function successUser() {
-  window.location.href = location.origin;
+  window.location.href = "https://yurizzjaxx.github.io/image-run/"
 }
 
 
