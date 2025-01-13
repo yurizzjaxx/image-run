@@ -49,10 +49,10 @@ function dis(token) {
             userplay["name"] = user.username
             userplay["coins"] = 10
             firebaseAdd("dis/user/player/" + user.id, userplay)
-            setTimeout(successUser, 6000)
+            setTimeout(successUser, 6000);
           } else {
             if (localStorage.getItem("userUid") == en64_utf8(ss.id)) {
-              setTimeout(successUser, 6000)
+              setTimeout(successUser, 6000);
             }
           }
         })
@@ -70,7 +70,7 @@ function dis(token) {
 
 
 function successUser() {
-  window.location.originf
+  window.location.href = location.origin;
 }
 
 
