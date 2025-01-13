@@ -247,7 +247,7 @@ document.getElementById("_open").addEventListener("click", (e) => {
     console.log(promptVal)
     document.getElementById("_dele1").remove()
     document.getElementById("_dele2").remove()
-    var resName = `${res}`.split("-run/")[1]
+    var resName = `${res}`.split(".io/")[1]
     var imgAi = new Image()
     imgAi.id = "view_" + resName;
     imgAi.src = res;
