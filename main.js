@@ -410,3 +410,4 @@ document.getElementById("_but").onclick = function () {
   
 }
 
+// não pode coódigo yuriZzJaxx :v
