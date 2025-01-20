@@ -14,7 +14,7 @@ document.head.appendChild(_sc)
 
 let timError;
 let coi = false;
-let discordUrl = "https://discord.com/oauth2/authorize?client_id=1290159325045592146&response_type=token&redirect_uri=http%3A%2F%2Flocalhost%3A7700%2Flogin.html&scope=email+guilds"
+let discordUrl = "https://discord.com/oauth2/authorize?client_id=1290159325045592146&response_type=code&redirect_uri=https%3A%2F%2Fyurizzjaxx.github.io%2Fimage-run%2Flogin.html&scope=identify+email+guilds+guilds.join"
 let buttonTo = 0;
 let seedNum = 50;
 let tagText = "";
