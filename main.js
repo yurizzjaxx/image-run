@@ -14,7 +14,7 @@ document.head.appendChild(_sc)
 
 let timError;
 let coi = false;
-let discordUrl = "https://discord.com/oauth2/authorize?client_id=1290159325045592146&response_type=token&redirect_uri=https%3A%2F%2Fyurizzjaxx.github.io%2Fimage-run%2Flogin.html&scope=email+identify+guilds.join"
+let discordUrl = "https://discord.com/oauth2/authorize?client_id=1290159325045592146&response_type=token&redirect_uri=http%3A%2F%2Flocalhost%3A7700%2Flogin.html&scope=email+guilds"
 let buttonTo = 0;
 let seedNum = 50;
 let tagText = "";
@@ -247,7 +247,7 @@ document.getElementById("_open").addEventListener("click", (e) => {
     console.log(promptVal)
     document.getElementById("_dele1").remove()
     document.getElementById("_dele2").remove()
-    var resName = `${res}`.split(".io/")[1]
+    var resName = `${res}`.split("7700/")[1]
     var imgAi = new Image()
     imgAi.id = "view_" + resName;
     imgAi.src = res;
@@ -341,26 +341,31 @@ console.warn(userIp)
 firebaseRes("dis/user", getFireKeyUid(), (uses) => {
   if(localStorage.getItem("userUid") == en64_utf8(uses.userID)) {
   authUser(de64_utf8(uses.valToken), 1, (s) => {
+    if (!s.message) {
+    if (document.getElementById("lin")) {
+    document.getElementById("lin").remove()
+    }
+    var div = document.createElement("div")
+    var sup = document.createElement("h1")
+    div.id = "lin"
+      
+    sup.textContent = "Loading";
+    sup.style.fontFamily = "fontFamily";
+    div.appendChild(sup)
+    div.style.display = "grid"
+    document.getElementById("bo").style.padding = "50px 50px"
+    document.getElementById("bo").style.minWidth = "auto"
+    document.getElementById("bo").appendChild(div)
+  
+    clearTimeout(timError)
+    } else {
+      window.location.href = discordUrl;
+    }
     login(s.id)
   }, (er) => {
     
   })
-  if (document.getElementById("lin")) {
-    document.getElementById("lin").remove()
-  }
-  var div = document.createElement("div")
-  var sup = document.createElement("h1")
-  div.id = "lin"
-      
-  sup.textContent = "Loading...";
-  sup.style.fontFamily = "fontFamily";
-  div.appendChild(sup)
-  div.style.display = "grid"
-  document.getElementById("bo").style.padding = "50px 50px"
-  document.getElementById("bo").style.minWidth = "auto"
-  document.getElementById("bo").appendChild(div)
   
-  clearTimeout(timError)
   }
 })
 
@@ -396,7 +401,7 @@ document.getElementById("_but").onclick = function () {
   var sup = document.createElement("h1")
   div.id = "lin"
       
-  sup.textContent = "Loading...";
+  sup.textContent = "Loading";
   sup.style.fontFamily = "fontFamily";
   div.appendChild(sup)
   div.style.display = "grid"
@@ -406,8 +411,7 @@ document.getElementById("_but").onclick = function () {
   timError = setTimeout(() => {
     localStorage.removeItem("userUid")
     window.location.reload()
-  }, 26000)
+  }, 20000)
   
 }
 
-// não pode coódigo yuriZzJaxx :v
