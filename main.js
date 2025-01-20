@@ -396,7 +396,7 @@ document.getElementById("_but").onclick = function () {
   var sup = document.createElement("h1")
   div.id = "lin"
       
-  sup.textContent = "Loading";
+  sup.textContent = "Loading...";
   sup.style.fontFamily = "fontFamily";
   div.appendChild(sup)
   div.style.display = "grid"
@@ -406,7 +406,7 @@ document.getElementById("_but").onclick = function () {
   timError = setTimeout(() => {
     localStorage.removeItem("userUid")
     window.location.reload()
-  }, 20000)
+  }, 26000)
   
 }
 
