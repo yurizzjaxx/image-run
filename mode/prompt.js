@@ -1,5 +1,5 @@
 function getUrl(strText, strUrl) {
-  return encodeURIComponent("Flux-v2. " + strText + "") + "?" + new URLSearchParams(strUrl).toString();
+  return encodeURIComponent("" + strText + "") + "?" + new URLSearchParams(strUrl).toString();
 }
 
 function getPrompt(promptText, width1, height1, seed1) {
